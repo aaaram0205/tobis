@@ -50,6 +50,8 @@
 .flex--jend {display: flex;justify-content:flex-end;}
 
 
+.padding-05 {padding: 0 5px;}
+
 
 /* 심사신청 HEADER */
 header {
@@ -59,7 +61,6 @@ header {
 	right:0;
     z-index: 1;
     background-color: #fff;
-	border-bottom: 1px solid #ddd;
 }
 
 header .inner {
@@ -68,25 +69,45 @@ header .inner {
 	position: relative;
 }
 
-header .inner .logo {
+header .inner .logo,
+.sub-header .header__btn-back  {
 	position: absolute;
-	top:0;
-	bottom:0;
+	top:50%;
 	left: 1.250rem;
-	margin: auto;
-	height: 1.541rem;
+	transform: translateY(-50%);
+	width: 5.521rem;
 }
 
 header .inner img {
-	height: 100%;	
+	width: 100%;	
 }
 
-header .inner .btn--sitemap {
+header .inner .btn--sitemap,
+.sub-header .header__btn-home {
 	position: absolute;
-	top:0;
-	bottom:0;
+	top:50%;
+	transform: translateY(-50%);
 	right:1.250rem;
-	margin: auto;
-	height: 1.125rem;
+	width: 1.375rem;
     cursor: pointer;
+}
+
+
+/* SUB HEADER LAYOUT */
+header.sub-header {
+	box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.sub-header .header__btn-back {
+	width: 1rem;
+}
+
+.sub-header .header__title {
+	height: 100%;
+	font-size: 1.125rem;
+	font-weight: 500;
+}
+
+.sub-header .header__btn-home {
+	width: 1.083rem;
 }
