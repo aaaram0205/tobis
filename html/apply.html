@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="../css/media.css">
 
     <!-- script -->
-    <script defer src="../js/main.js"></script>
+    <script defer src="../js/script.js"></script>
 </head>
 <body>
 
@@ -98,13 +98,20 @@
                             <input type="number" id="" placeholder="예) 서울중구1234" required />
                         </div>  
 
-                        <div class="terms">
+                        <div class="input-wrap input-wrap--terms">
                             <em>이용 약관 동의</em>
+
+                            <div class="input--check input--checkAll">
+                                <input type="checkbox" name="terms" value="" id="chkAll"> 
+                                <label for="chkAll">전체동의</label>
+                                <span class="checkmark"></span>
+                            </div>
+
                             <div class="accordian accordian2">
                                 <div class="accordian__list">
                                     <h3 class="accordian__title flex--ac">
                                         <div class="input--check">
-                                            <input type="checkbox" name="" value="" id="chk1"> 
+                                            <input type="checkbox" name="terms" value="" id="chk1"> 
                                             <label for="chk1">개인정보처리방침 활용동의</label>
                                             <span class="checkmark"></span>
                                         </div>
@@ -151,7 +158,7 @@
                                 <div class="accordian__list">
                                     <h3 class="accordian__title flex--ac">
                                         <div class="input--check">
-                                            <input type="checkbox" name="" value="" id="chk1"> 
+                                            <input type="checkbox" name="terms" value="" id="chk1"> 
                                             <label for="chk1">[필수] 개인(신용)정보의 조회에 관한 사항</label>
                                             <span class="checkmark"></span>
                                         </div>
@@ -199,7 +206,7 @@
                                 <div class="accordian__list">
                                     <h3 class="accordian__title flex--ac">
                                         <div class="input--check">
-                                            <input type="checkbox" name="" value="" id="chk1"> 
+                                            <input type="checkbox" name="terms" value="" id="chk1"> 
                                             <label for="chk1">[필수] 개인(신용)정보의 제공에 관한 사항</label>
                                             <span class="checkmark"></span>
                                         </div>
@@ -259,7 +266,7 @@
                                 <div class="accordian__list">
                                     <h3 class="accordian__title flex--ac">
                                         <div class="input--check">
-                                            <input type="checkbox" name="" value="" id="chk1"> 
+                                            <input type="checkbox" name="terms" value="" id="chk1"> 
                                             <label for="chk1">
                                                 민감정보 및 고유식별정보의 처리에 관한사항 (필수)
                                                 <p class="description">주민등록번호, 외국인등록번호 처리</p>
@@ -284,7 +291,7 @@
                                 <div class="accordian__list">
                                     <h3 class="accordian__title flex--ac">
                                         <div class="input--check">
-                                            <input type="checkbox" name="" value="" id="chk1"> 
+                                            <input type="checkbox" name="terms" value="" id="chk1"> 
                                             <label for="chk1">
                                                 책임보험 만기 및 가입안내 동의(필수)
                                                 <p class="description">오토바이 책임보험 만기안내</p>
@@ -326,18 +333,20 @@
                                     </div>
                                 </div>     
                             </div>
+
+                            <div class="terms__descriptions">
+                                <p class="description">
+                                    개인정보 보호법에 의거하여 가입설계를 위한 개인(신용)정보 처리 동의서를
+                                    동의 한 경우에만 당사의 보험계약 가입 등을 하실 수 있습니다.
+                                </p>
+                                <p class="description">
+                                    책임보험이 유효한 상태여야 본 시간제보험의 보상이 가능합니다.
+                                    만기일 이전에 갱신 누락예방을 위해 사전안내를 드릴 수 있습니다.
+                                </p>
+                            </div>
                         </div>
 
-                        <p class="description">
-                            개인정보 보호법에 의거하여 가입설계를 위한 개인(신용)정보 처리 동의서를
-                            동의 한 경우에만 당사의 보험계약 가입 등을 하실 수 있습니다.
-                        </p>
-                        <p class="description">
-                            책임보험이 유효한 상태여야 본 시간제보험의 보상이 가능합니다.
-                            만기일 이전에 갱신 누락예방을 위해 사전안내를 드릴 수 있습니다.
-                        </p>
-
-                        <button id="" class="">가입 신청</button>
+                        <button type="submit" id="" class="btn--submit">가입 신청</button>
                     </div>
                 </form>
 
@@ -348,5 +357,18 @@
 
     </div>
      <!--::: //가입신청 :::-->
+
+     <script>
+         //이용약관 동의 > 전체동의 체크박스 클릭시
+         const checkAll = document.querySelector('#chkAll');
+
+         checkAll.addEventListener ('click', function() {
+            const checkboxes = document.getElementsByName('terms');
+
+            checkboxes.forEach(function(checkbox) {
+                checkbox.checked = checkAll.checked;
+            })
+         });
+     </script>
 </body>
 </html>

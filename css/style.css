@@ -246,24 +246,29 @@ body * {
 	border-top: 1px solid #333333;
 }
 
-.accordian1 .accordian__title {
+.accordian .accordian__title {
 	position: relative;
 	height: 2.875rem;
 	padding: 0 0.688rem;
 	border-bottom: 1px solid #e1e1e1;
 }
 
-.accordian1 .accordian__title::after {
+.accordian .accordian__title::after {
 	content: '';
 	position: absolute;
 	top:50%;
 	right:0.813rem;
 	z-index: 9;
-	transform:translateY(-50%);
+	transform:rotate(0deg) translateY(-50%);
 	width:0.583rem;
 	height: 0.333rem;
 	background: url(../images/intro__sec5__arr.jpg) no-repeat center;
 	background-size: contain;
+	transition: 0.3s;
+}
+
+.accordian .accordian__list.active .accordian__title::after {
+	transform:rotate(180deg) translateY(0.1665rem);
 }
 
 .accordian1 .accordian__title img {
@@ -278,10 +283,17 @@ body * {
 }
 
 .accordian .accordian__contents {
+	max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
     padding: 1rem 0.854rem;
     background-color: #f9f9f9;
     font-size: 0.625rem;
     color: #666;
+}
+
+.accordian .accordian__list.active .accordian__contents {
+	max-height: inherit;
 }
 
 .accordian .accordian__contents ul li {
@@ -368,7 +380,7 @@ body * {
 	margin-bottom: 0;
 }
 
-.input-wrap em {
+.input-wrap > em {
 	margin-bottom: 0.688rem;
 	font-size: 0.875rem;
 	font-weight: 500;
@@ -443,6 +455,11 @@ body * {
 	border-bottom: 1px solid #e1e1e1;
 }
 
+#wrap  .accordian2 .accordian__title .description {
+	line-height: 1;
+	margin-top: 4px;
+}
+
 .accordian2 .accordian__contents {
 	background-color: #fff;
 }
@@ -451,8 +468,89 @@ body * {
 	margin-bottom: 0.5rem;;
 }
 
-.input--check {display: block;position: relative; padding-left: 23px; cursor: pointer;font-size: 0.75rem;
-	line-height: 1;-webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
-.input--check input { position: absolute; left: 0;z-index: 9; width: 100%;height: 100%;opacity: 0; cursor: pointer;margin:0;}
-.input--check .checkmark {position: absolute;top: 50%;left: 0;transform: translateY(-50%); width: 0.938rem;height: 0.938rem; border: 1px solid #bdbdbd; background: url(/images/icon--check1.jpg) no-repeat center;border-radius: 50%;overflow: hidden;background-size: 0.46rem;}
-.input--check input:checked ~ .checkmark {border: 1px solid #7eb84b; background-image: url(/images/icon--check2.jpg);}
+.input--check {
+	display: block;
+	position: relative;
+	 padding-left: 1.563rem; 
+	 cursor: pointer;
+	 font-size: 0.75rem;
+	line-height: 1;
+	-webkit-user-select: none;
+	 -moz-user-select: none;
+	  -ms-user-select: none; 
+	  user-select: none;
+}
+
+.input--check input { 
+	position: absolute;
+	 left: 0;
+	 z-index: 9; 
+	 width: 100%;
+	 height: 100%;
+	 opacity: 0; 
+	 cursor: pointer;
+	 margin:0;
+}
+
+.input--check .checkmark {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	 width: 0.938rem;
+	 height: 0.938rem; 
+	 border: 1px solid #bdbdbd; 
+	 background: url(/images/icon--check1.jpg) no-repeat center;border-radius: 50%;
+	 overflow: hidden;
+	 background-size: 0.46rem;
+}
+
+.input--check input:checked ~ .checkmark {
+	border: 1px solid #7eb84b; 
+	background-image: url(/images/icon--check2.jpg);
+}
+
+
+.input-wrap--terms {
+	position: relative;
+}
+
+.input-wrap--terms .input--checkAll {
+	position: absolute;
+    top: 0;
+    left: 5.625rem;
+	width:4.375rem;
+}
+
+.input-wrap--terms .input--checkAll label{
+	font-size: 0.625rem;
+	font-weight: 700;
+	color: #bdbdbd;
+}
+
+.input-wrap--terms .input--checkAll .checkmark {
+	width: 100%;
+	height: 1.458rem;
+	border: 1px solid #ddd;
+	border-radius: 20px;
+	background-position: 0.646rem 50%;
+}
+
+.input-wrap--terms .input--checkAll input:checked ~ label{
+	color: #7eb84b;
+}
+
+.input-wrap--terms .terms__descriptions {
+	margin: 0.875rem 0 1.938rem;
+}
+
+.btn--submit {
+	width: 100%;
+	height: 3.125rem;
+	font-size: 0.875rem;
+	font-weight: 700;
+	text-align: center;
+	color: #fff;
+	background-color: #7eb84b;
+	border-radius: 7px;
+}

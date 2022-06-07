@@ -61,6 +61,7 @@ header {
 	right:0;
     z-index: 1;
     background-color: #fff;
+	box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 header .inner {
@@ -95,7 +96,7 @@ header .inner .btn--sitemap,
 
 /* SUB HEADER LAYOUT */
 header.sub-header {
-	box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
 }
 
 .sub-header .header__btn-back {
@@ -111,3 +112,5 @@ header.sub-header {
 .sub-header .header__btn-home {
 	width: 1.083rem;
 }
+
+
