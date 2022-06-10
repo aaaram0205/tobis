@@ -30,12 +30,11 @@
     font-style: normal;
 }
 
-
 .font--scoreR {font-family: 'S-CoreDream-4Regular', sans-serif;}
 .font--scoreB {font-family: 'S-CoreDream-6Bold', sans-serif;}
 .font--nexonR {font-family: 'NEXON Lv2 Gothic', sans-serif;}
 .font--nexonB {font-family: 'NEXON Lv2 Gothic Bold', sans-serif;}
-
+.font--mont {font-family: 'Montserrat', sans-serif;font-weight: 600;}
 
 
 
@@ -50,7 +49,13 @@
 .flex--jend {display: flex;justify-content:flex-end;}
 
 
-.padding-05 {padding: 0 5px;}
+.padding-05 {
+	padding: 0 5px;
+}
+
+img {
+	max-width: 100%;
+}
 
 
 /* 심사신청 HEADER */
@@ -83,7 +88,6 @@ header .inner img {
 	width: 100%;	
 }
 
-header .inner .btn--sitemap,
 .sub-header .header__btn-home {
 	position: absolute;
 	top:50%;
@@ -95,8 +99,8 @@ header .inner .btn--sitemap,
 
 
 /* SUB HEADER LAYOUT */
-header.sub-header {
-
+header.sub-header .inner{
+	height: 3.333rem;
 }
 
 .sub-header .header__btn-back {

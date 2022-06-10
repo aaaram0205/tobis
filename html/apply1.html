@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>토비스 시간제보험: 가입신청</title>
+
+    <!-- webfont-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- script -->
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script defer src="../js/script.js"></script>
+</head>
+<body>
+
+    <!--::: 가입신청 시작:::-->
+    <div id="wrap"  class="sub-wrap">
+
+        <!--  SUB HEADER {-->
+        <header class="sub-header">
+            <div class="inner">
+
+                <a href="../index.html" class="header__btn-back">
+                    <img src="../images/icon--back.jpg" alt="뒤로가기" />
+                </a>
+
+                <h1 class="header__title flex--ac-jc">가입 신청</h1>
+
+                <a href="../index.html" class="header__btn-home">
+                    <img src="../images/icon--home.jpg" alt="홈으로 이동" />
+                </a>
+            </div>
+        </header>
+        <!--} //SUB HEADER -->
+
+		<!--  SUB CONTAINER {-->
+        <div class="sub-container sub-container--apply">
+            <div class="inner">
+
+                <div class="page-top">
+                    <h2>
+                        개인 정보를 <br>입력해 주세요.
+                    </h2>
+
+                    <ul class="step-navi flex--ac">
+                        <li class="current">1</li>
+                        <li>2</li>
+                    </ul>
+                </div>
+
+                
+                <section class="form-wrap">
+
+					<form action="">
+                        <div class="input-wrap">
+                            <em>이름</em>
+                            <input type="text" id="" placeholder="이름을 입력해주세요.">
+							<p class="invalid-text">이름을 입력해주세요.</p>
+                        </div>        
+
+                        <div class="input-wrap input--resident">
+                            <em>주민등록번호</em>
+                            <ul class="flex--ac">
+                                <li>
+                                    <input type="number" id="" placeholder="앞 6자리" required />
+                                </li>
+                                <li>-</li>
+                                <li>
+                                    <input type="number" id="" placeholder="뒤 7자리" required />
+                                </li>
+                            </ul>
+							<p class="invalid-text">주민등록번호를 입력해주세요.</p>	<!-- .invalid-text:: 사용자 입력 오류 시 뜨는 텍스트/ 현재 style.css에서 display: none처리함/ 이하 동일 -->
+                        </div>
+
+                        <div class="input-wrap input--phone">
+                            <em>휴대폰 번호</em>
+                            <div class="flex--ac-jsb">
+                                <input type="number" id="" maxlength="6" placeholder="- 없이 입력해주세요." required />
+                                <button id="btn--send">인증번호 전송</button>
+                                <button id="btn--resend"  style="display: none">인증번호 재전송</button>
+                            </div>  
+							<p class="invalid-text">휴대폰 번호를 입력해주세요.</p>	
+                        </div>
+
+                        <div class="input-wrap input--certification">
+                            <em>인증번호</em>
+							<div class="number-wrap">
+								<input type="number" id="" maxlength="6" placeholder="인증번호 6자리" required />
+								<img src="../images/icon--check1.jpg" alt="인증번호 틀림" class="certifi-check">
+								<img src="../images/icon--check2.jpg" alt="인증번호 확인" class="certifi-check" style="display:none;">
+							</div>
+							<p class="invalid-text">인증번호 6자리를 입력해주세요.</p>	
+                        </div>
+
+                        <div class="input-wrap">
+                            <em>이륜차 차량 번호(전체)</em>
+                            <input type="test" id="" placeholder="예) 서울중구1234" required />
+							<p class="invalid-text">차량번호 전체를 입력해주세요.</p>	
+                        </div>  
+
+                        <div class="input-wrap input-wrap--terms">
+                            <em>이용 약관 동의</em>
+
+                            <div class="input--check input--checkAll">
+                                <input type="checkbox" name="chkAll" value="" id="chkAll"> 
+                                <label for="chkAll">전체동의</label>
+                                <span class="checkmark"></span>
+                            </div>
+
+                            <div class="accordian accordian2">
+                                <div class="accordian__list">
+                                    <h3 class="accordian__title flex--ac">
+                                        <div class="input--check">
+                                            <input type="checkbox" name="terms" value="" id="chk1"> 
+                                            <label for="chk1">개인정보처리방침 활용동의</label>
+                                            <span class="checkmark"></span>
+                                        </div>
+										<div class="btn--accordion btn--accor-open"></div>
+                                    </h3>
+                                    <div class="accordian__contents">
+										<div class="inner">
+											<div class="division">
+												<h6>개인(신용)정보의 수집, 이용에 관한 사항</h6>
+												<p>당사(DB손해보험) 및 당사 업무수탁자는 「개인정보보호법」 및 「신용정보의 이용 및 보호에 관한 법률」에 따라 귀하의 개인(신용)정보를 다음과 같이 수집ㆍ이용하고자 합니다.</p>
+											</div>
+											
+											<div class="division">
+												<h6>1. 개인(신용)정보의 수집 · 이용 목적</h6>
+												<p>보험보험계약 상담, 재무설계서비스, 보험계약 인수여부 판단(건강진단 및 계약 적부조사 포함), 실손의료보험계약·기타손해보험계약 등 ‘실제 발생하는 손해만을 보상하는 실손형보험’의 중복가입 확인을 위한 보험 가입내역 조회</p>
+											</div>
+
+											<div class="division">
+												<h6>2. 보험회사가 수집 · 이용할 개인(신용)정보의 내용</h6>
+												<ul>
+													<li>고유식별정보 : 성명, 주민등록번호, 외국인등록번호,여권번호</li>
+													<li>민감정보 : 피보험자의 질병·상해에 관한 정보(진료기록, 상병명, 기왕증, 흡연 여부 등), 교통법규 위반정보</li>
+													<li>일반 개인 정보 : 성명, 주소, 생년월일, 이메일, 유·무선 전화번호, 국적, 직업, 운전여부, 국내거소신고번호, 외국인체류자격·코드, 전문보험계약자</li>
+													<li>(보험설계사·보험대리점·보험중개사 등)의 정보, 사업자등록증상의 정보, 법률 및 국제협약 등의 의무이행을 위한 정보</li>
+													<li>신용 거래 정보 : 보험계약정보(상품종류, 기간, 보험가입금액 등), 보험금정보(보험금 지급사유, 지급금액, 사고정보 등), 계약 전 알릴 의무사항(취미 등)</li>
+													<li>신용 능력 정보 : 소득 및 재산 정보, 보험가입물건 정보(피보험차량정보 등)</li>
+													<li>공공정보 : 군운전경력정보, 실명확인증표 정보</li>
+												</ul>
+											</div>
+
+											<div  class="division">
+												<h6>3. 개인(신용)정보의 보유 · 이용 기간</h6>
+												<ul>
+													<li>이용기간 : 수집·이용 동의일로부터 1년까지</li>
+													<li>보유기간 : 수집·이용 동의일로부터 1년까지</li>
+												</ul>
+												<p class="description">
+													보험 가입을 위해, 보험계약 설계를 진행해 주셔야 운행이 가능하오니, 개인정보 수집, 이용에관한 사항에 동의해 주셔야합니다.
+												</p>
+												<p class="description">
+													보험 설계 동의하지 않으실 경우, 운행이 불가하며, 한번 심사가 완료된 이후 담보의 변경, 차량의 변경을 원하실 경우는 가입동의, 심사부터 다시 진행하셔야 합니다.
+												</p>
+											</div>
+										</div>
+                                    </div>
+                                </div>
+                                <div class="accordian__list">
+                                    <h3 class="accordian__title flex--ac">
+                                        <div class="input--check">
+                                            <input type="checkbox" name="terms" value="" id="chk1"> 
+                                            <label for="chk1">[필수] 개인(신용)정보의 조회에 관한 사항</label>
+                                            <span class="checkmark"></span>
+                                        </div>
+										<div class="btn--accordion btn--accor-open"></div>
+                                    </h3>
+                                    <div class="accordian__contents">
+										<div class="inner">
+											<div class="division">
+												<em>개인(신용)정보의 조회에 관한 사항</em>
+												<p>
+												당사(DB손해보험) 및 당사 업무수탁자는 「개인정보보호법」 및 「신용정보의 이용 및 보호에 관한 법률」에 따라 귀하의 개인(신용)정보를 다음과 같이 조회하고자 합니다.</p>
+											</div>
+											
+											<div class="division">
+												<h6>1. 개인(신용)정보의 조회 목적</h6>
+												<ul>
+													<li>조회 대상 기관 : 종합신용정보집중기관, 보험요율산출기관, 국토교통부, 생명·손해보험협회, 자동차 제조회사</li>
+													<li>
+														조회 목적 :
+														<p> 종합신용정보집중기관·보험요율산출기관 ·국토교통부 : 보험계약상담, 보험계약 인수여부 결정을 위한 판단, 보험 가입한도 조회, 실손의료보험계약·기타손해보험계약 등 ‘실제 발생하는 손해를 보상하는 실손형 보험‘의 중복가입 확인</p>
+														<p>생명·손해보험협회 : 전문보험계약자 확인</p>
+														<p> 자동차 제조회사 : 차량 모델 및 부속 장치 확인</p>
+													</li>
+												</ul>
+											</div>
+
+											<div class="division">
+												<h6>2. 조회할 개인(신용)정보의 내용</h6>
+												<ul>
+													<li>고유식별정보 : 성명, 주민등록번호, 외국인등록번호,여권번호</li>
+													<li>민감정보 : 피보험자의 질병·상해에 관한 정보(진료기록, 상병명, 기왕증, 흡연 여부 등), 교통법규 위반정보</li>
+													<li>일반 개인 정보 : 성명, 국내거소신고번호, 전문보험계약자(보험설계사·보험대리점·보험중개사 등)의 정보, 사업자등록증상의 정보, 법률 및 국제협약 등의 의무이행을 위한 정보</li>
+													<li>신용 거래 정보 : 보험계약정보(상품종류, 기간, 보험가입금액 등), 보험금정보(보험금 지급사유, 지급금액, 사고정보 등), 계약 전 알릴 의무사항(취미 등)</li>
+													<li>신용 능력 정보 : 소득 및 재산 정보</li>
+													<li>공공정보 : 군운전경력정보, 실명확인증표 정보, 보험가입물건 정보(피보험자차량 정보 등)</li>
+												</ul>
+											</div>
+											
+											<div class="division">
+												<h6>3. 조회동의 유효 기간 및 조회자 (개인(신용)정보를 제공받 은 자)의 보유 · 이용 기간</h6>
+												<p>동의일로부터 보험계약의 청약시까지(최대 1년)</p>
+												<p class="description">보험 가입을 위해, 보험계약 설계를 진행해 주셔야 운행이 가능하오니, 개인정보 수집, 이용에관한 사항에 동의해 주셔야합니다.</p>
+												<p class="description">보험 설계 동의하지 않으실 경우, 운행이 불가하며, 한번 심사가 완료된 이후 담보의 변경, 차량의 변경을 원하실 경우는 가입동의, 심사부터 다시 진행하셔야 합니다.</p>
+											</div>
+										</div>
+                                    </div>
+                                </div>       
+                                <div class="accordian__list">
+                                    <h3 class="accordian__title flex--ac">
+                                        <div class="input--check">
+                                            <input type="checkbox" name="terms" value="" id="chk1"> 
+                                            <label for="chk1">[필수] 개인(신용)정보의 제공에 관한 사항</label>
+                                            <span class="checkmark"></span>
+                                        </div>
+										<div class="btn--accordion btn--accor-open"></div>
+                                    </h3>
+                                    <div class="accordian__contents">
+										<div class="inner">
+											<div class="division">
+												<em>개인(신용)정보의 제공에 관한사항</em>
+												<p>
+													당사는 「개인정보보호법」 및 「신용정보의 이용 및 보호에 관한 법률」에 따라 귀하의 개인(신용)정보를 다음과 같이 제3자에게 제공하고자 합니다.</p>
+											</div>
+											
+											<div class="division">
+												<h6>1. 개인정보를 제공받는 자</h6>
+												<ul>
+												   <li>기명 피보험자 : 우아한 형제들</li>
+												   <li>종합신용정보집중기관 : 한국신용정보원</li>
+												   <li>보험요율산출기관 : 보험개발원</li>
+												   <li>공공기관: 국토교통부</li>
+												   <li>보험회사 등 : 생명·손해보험사, 국내 재보험사, 공제사업자, 체신관서(우체국보험)</li>
+												   <li>보험협회 : 생명·손해보험협회</li>
+												   <li>자동차 제조회사 : 현대자동차 등</li>
+												   <li>업무수탁자 등 : 건강진단·계약적부조사, 보험모집 등 위탁을 받은 자</li>
+												</ul>
+											</div>
+
+											<div class="division">
+												<h6>2. 개인정보를 제공받는 자의 이용목적</h6>
+												<ul>
+													<li>종합신용정보집중기관 : 개인(신용)정보 조회</li>
+													<li>보험요율산출기관 ·공공기관 : 보험요율 산출</li>
+													<li>보험회사 등 : 보험계약 인수여부 판단, 보험계약 공동인수</li>
+													<li>보험협회 : 전문보험계약자 확인</li>
+													<li>자동차 제조회사 : 차량 모델 및 부속 장치 조회</li>
+													<li>업무수탁자 등 : 건강진단 및 계약적부조사, 보험모집 업무 등</li>
+												</ul>
+											</div>
+											
+											<div class="division">
+												<h6>3. 제공할 개인정보의 내용</h6>
+												<ul>
+													<li>고유식별정보 : 주민등록번호, 운전면허번호, 외국인등록번호, 여권번호</li>
+													<li>민감정보 : 피보험자의 질병·상해에 관한 정보(진료기록, 상병명, 기왕증, 흡연 여부 등), 교통법규 위반정보</li>
+													<li>일반 개인 정보 : 성명, 주소, 이메일, 유·무선 전화번호, 성별, 직업, 국내거소신고번호, 외국인체류 자격·코드, 전문보험계약자</li>
+													<li>(보험설계사·보험대리점·보험중개사 등)의 정보, 사업자 등록증상의 정보, 법률 및 국제협약 등의 의무이행을 위한 정보</li>
+													<li>신용 거래 정보 : 보험계약정보(상품종류, 기간, 보험가입금액 등), 보험금정보(보험금 지급사유, 지급금액, 사고정보 등), 계약 전 알릴 의무사항(취미 등)</li>
+													<li>신용 능력 정보 : 소득 및 재산 정보, 보험가입물건 정보(피보험차량정보 등)</li>
+												</ul>
+											</div>
+
+											<div class="division">
+												<h6>4. 제공받는 자의 개인정보 보유·이용기간</h6>
+												<p>개인(신용)정보를 제공받는 자의 이용목적을 달성할 때까지(최대 거래정료일로부터 1년)</p>
+												<p class="description">개인(신용)정보의 제공 동의 거부 시 보험가입 설계 처리가 제한됩니다.</p>
+											</div>
+										</div>
+                                    </div>
+                                </div>  
+                                <div class="accordian__list">
+                                    <h3 class="accordian__title flex--ac">
+                                        <div class="input--check">
+                                            <input type="checkbox" name="terms" value="" id="chk1"> 
+                                            <label for="chk1">
+                                                [필수] 민감정보 및 고유식별정보의 처리에 관한사항
+                                                <p class="description">주민등록번호, 외국인등록번호 처리</p>
+                                            </label>
+                                            <span class="checkmark"></span>
+                                        </div>
+										<div class="btn--accordion btn--accor-open"></div>
+                                    </h3>
+                                    <div class="accordian__contents">
+										<div class="inner">
+											<div class="division">
+												<em>민감정보 및 고유식별정보의 처리에 관한 사항</em>
+												<p>당사(DB손해보험) 및 당사 업무수탁자는「개인정보보호법」및「신용정보의 이용 및 보호에 관한 법률」에 따라 상기의 개인(신용)정보에 대한 개별 동의사항에 대하여 다음과 같이 귀하의 민감정보(질병·상해정보) 및 고유식 별정보(주민등록번호·외국인등록번호)를 처리(수집·이용, 조회, 제공) 하고자 합니다.</p>
+											</div>
+											
+											<div class="division">
+												<h6>1. 질병·상해정보 처리</h6>
+											</div>
+											<div class="division">
+												<h6>2. 주민등록번호, 외국인등록번호 처리</h6>
+											</div>
+										</div>
+                                    </div>
+                                </div>     
+                                <div class="accordian__list">
+                                    <h3 class="accordian__title flex--ac">
+                                        <div class="input--check">
+                                            <input type="checkbox" name="terms" value="" id="chk1"> 
+                                            <label for="chk1">
+                                                [필수] 책임보험 만기 및 가입안내 동의
+                                                <p class="description">오토바이 책임보험 만기안내</p>
+                                            </label>
+                                            <span class="checkmark"></span>
+                                        </div>
+										<div class="btn--accordion btn--accor-open"></div>
+                                    </h3>
+                                    <div class="accordian__contents">
+										<div class="inner">
+											<div class="division">
+												<h6>1. 책임보험 만기 및 가입안내 동의에대한 목적</h6>
+											</div>
+											<div class="division">
+												<h6>2. 주민등록번호, 외국인등록번호 처리</h6>
+												<p>이륜차 시간제보험은 피보험 이륜차의 책임보험에 대한 가입이 필수사항입니다. 보험사는 이를확인하기위하여 가입자에게 유선안내를 통한 보험가입안내를 제공할 수 있습니다.
+													이에대한 가입자의 마케팅 활용제공동의가 필요합니다.
+													책임보험 만기 및 가입안내 동의는 책임보험 가입여부, 책임보험의 만기정보 조회를 통하여 프로미카 플렉스 보험가입이 제한될 경우 자동차보험가입 안내를 제공하는 목적으로 활용됩니다.
+													(SIMG 고객센터 1877-3006 통한 동의철회가능)</p>
+											</div>
+
+											<div class="division">
+												<h6>2. 수집 및 활용 관련 정보</h6>
+												<p>SIMG는 보험심사에서 보다 다양한 정보를 제공하고, 서비스의 질을 향상시키기 위하여 당사의 비즈니스 파트너에게 본 활용동의서에 동의한 회원의 개인정보를 제공합니다.
+													제공된 정보는 명시된 이용목적을 벗어나 이용되지 않습니다.
+													개인정보보호관련 법률에 의거 보험가입 심사에 활용한 정보는 안전하게 관리되며, 개인정보의 유출 등 사고가 일어나지 않도록 더욱 철저한 보안이 이루어지도록 노력하고 있습니다.</p>
+											</div>   
+
+											<div class="division">
+												<h6>3. 개인정보관련 의견수렴 및 불만처리에 관한 사항</h6>
+												<p>회사는 가입신청자와의 원활환 의사소통을 위해 민원처리센터를 운영하고 있으며 연락처는 다음과 같습니다.</p>
+												<p>[민원처리센터]</p>
+												<ul>
+													<li>이메일 : jt@simg.kr</li>
+													<li>전화번호 : 1877-3006</li>
+													<li>팩스번호 : 02-6442-6419</li>
+													<li>주 소 : 서울특별시 강남구 테헤란로 415, 16층 (대치동, 연봉빌딩)</li>
+												</ul>
+												<p class="description">본 동의문에는 전화, 문자, 이메일 등을 활용한 정보 수신 동의 내용이 포함되어 있습니다.</p>
+											</div>
+										</div>
+                                    </div>
+                                </div>     
+                            </div>
+
+                            <div class="terms__descriptions">
+                                <p class="description">
+                                    개인정보 보호법에 의거하여 가입설계를 위한 개인(신용)정보 처리 동의서를
+                                    동의 한 경우에만 당사의 보험계약 가입 등을 하실 수 있습니다.
+                                </p>
+                                <p class="description">
+                                    책임보험이 유효한 상태여야 본 시간제보험의 보상이 가능합니다.
+                                    만기일 이전에 갱신 누락예방을 위해 사전안내를 드릴 수 있습니다.
+                                </p>
+                            </div>
+                        </div>
+
+                        <button type="submit" id="" class="btn--green">가입 신청</button>
+					</form>
+
+                </section>
+
+            </div>
+        </div>
+		<!--} //SUB CONTAINER -->
+
+    </div>
+     <!--::: //가입신청 끝 :::-->
+
+     <script>
+
+		//이용약관 동의 > 전체동의 체크박스 클릭시
+		const checkAll = document.querySelector('#chkAll');
+		const checkboxes = document.getElementsByName('terms');
+
+		checkAll.addEventListener ('click', function() {
+			for (let i = 0; i < checkboxes.length; i++) {
+				if(checkAll.checked) {
+					checkboxes[i].checked = true;
+				} else {
+					checkboxes[i].checked = false;
+				}
+			}
+		});
+
+		for (let i = 0; i < checkboxes.length; i++) {
+			checkboxes[i].addEventListener ('click', function() {
+				unChecked()
+			});
+		}
+
+		function unChecked() {
+			for (let i = 0; i < checkboxes.length; i++) {
+				if(checkboxes[i].checked == false) {
+					checkAll.checked = false;
+				}
+			}
+		}
+
+
+
+		//이용약관동의 > ACCORDION:: INDEX의 ACCORDION과 달리 체크박스영역과 겹치지 않도록 이벤트 핸들러 수정
+		const accorList = document.querySelectorAll('.accordian__list');
+		const btnOpen = document.querySelectorAll('.btn--accor-open');
+		const accorCont = document.getElementsByClassName('accordian__contents');
+
+		btnOpen.forEach(function(btn, index) {
+			btn.addEventListener ('click', function(e){
+
+				const cont = accorCont[index]
+				
+				if (e.currentTarget !== btn) {
+					cont.style.maxHeight = null; 
+				}
+				e.currentTarget.classList.toggle("active");
+
+				if (cont.style.maxHeight){ 
+					e.currentTarget.classList.remove("active");
+					cont.style.maxHeight = null;
+				} else {  
+					cont.style.maxHeight = cont.scrollHeight + "px";
+				}
+			});
+		});
+
+	 </script>
+</body>
+</html>

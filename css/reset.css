@@ -1,7 +1,6 @@
 @charset "utf-8";
 
 
-
 *{word-break:keep-all;}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -72,8 +71,6 @@ em{display: block;}
 
 
 
-
-
 /* input 기본 스타일 초기화 */
 input {
 	-webkit-appearance: none !important;
@@ -87,7 +84,9 @@ input {
 }
 
 /* IE10 이상에서 input box 에 추가된 지우기 버튼 제거 */
-input::-ms-clear { display: none; }
+input::-ms-clear { 
+	display: none; 
+}
 
 /* input type number 에서 화살표 제거 */
 input[type='number']::-webkit-inner-spin-button,
@@ -107,8 +106,9 @@ select {
 }
 
 /* IE 에서 Select box 화살표 제거 */
-select::-ms-expand { display: none; }
-
+select::-ms-expand { 
+	display: none; 
+}
 
 input[type='number']::-webkit-outer-spin-button,
 input[type='number']::-webkit-inner-spin-button {
@@ -119,15 +119,13 @@ input[type='number']::-webkit-inner-spin-button {
 }
 
 input[type='number'] {
-    -moz-appearance: textfield;
+    -moz-appearance: textfield !important;
 }
-
 
 input[type='password']::-ms-reveal,
 input[type='password']::-ms-clear {
     display: none;
 }
-
 
 input[type=search]::-webkit-search-cancel-button,
 input[type=search]::-webkit-search-decoration,
@@ -168,7 +166,6 @@ textarea {
     -moz-box-sizing: content-box;
 	border-radius:0;
 }
-
 
 
 @supports (-webkit-overflow-scrolling: touch) {
